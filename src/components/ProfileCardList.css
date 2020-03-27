@@ -8,6 +8,7 @@
   background-color: #daad86;
   border-radius: 20px;
   justify-content: center;
+  box-shadow: 10px 10px 20px;
 
 }
 
@@ -35,6 +36,7 @@ p {
 }
 img {
   align-content: center;
+  border-radius: 10px;
 }
 
 .Email {
