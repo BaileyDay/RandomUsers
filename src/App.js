@@ -1,5 +1,6 @@
 // Import React libraries
 import React, { Component } from 'react';
+import { Container, Box, Button } from 'bloomer';
 
 // Import components
 import ProfileCardList from './components/ProfileCardList';
@@ -10,11 +11,11 @@ import './App.css';
 class App extends Component {
   state = {
     userData: [],
-    title: 'Randos'
+    title: 'Random Character Creator'
   };
 
   loadData = async () => {
-    const response = await fetch('https://randomuser.me/api/?results=6');
+    const response = await fetch('https://randomuser.me/api/?results=18');
     const data = await response.json();
     return data.results;
   };
@@ -39,9 +40,12 @@ class App extends Component {
     const { title, userData } = this.state;
     return (
       <div className="App">
-        <h1>{title}</h1>
-        <button onClick={this.handleClick}>Load New People</button>
+        <h1 className="title">{title}</h1>
+        <div className="refreshButton">
+          <button onClick={this.handleClick}>Load New Characters</button>
+        </div>
         <ProfileCardList userData={userData} />
+
       </div>
     );
   }

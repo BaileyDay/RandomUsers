@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from './ProfileCard';
 import './ProfileCardList.css';
+import { Container, Box } from 'bloomer';
 
 const ProfileCardList = props => {
   const { userData } = props;
@@ -13,8 +14,8 @@ const ProfileCardList = props => {
           </li>
         ))
       ) : (
-        <li>No User Data</li>
-      )}
+          <li>No User Data</li>
+        )}
     </ul>
   );
 };
